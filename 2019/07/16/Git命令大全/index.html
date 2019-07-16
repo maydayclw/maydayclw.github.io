@@ -101,18 +101,17 @@
 
 
 
-  <meta name="description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
-<meta name="keywords" content="Homebrew,Mac">
+  <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Homebrew注意事项和使用技巧">
-<meta property="og:url" content="http://yoursite.com/2019/07/14/Homebrew注意事项和使用技巧/index.html">
+<meta property="og:title" content="Git命令大全">
+<meta property="og:url" content="http://yoursite.com/2019/07/16/Git命令大全/index.html">
 <meta property="og:site_name" content="ClwsBlogs">
-<meta property="og:description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-14T14:37:07.691Z">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79ly1g51nipvwfvj316h0u0b2a.jpg">
+<meta property="og:updated_time" content="2019-07-16T06:17:38.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Homebrew注意事项和使用技巧">
-<meta name="twitter:description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
+<meta name="twitter:title" content="Git命令大全">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/006tNc79ly1g51nipvwfvj316h0u0b2a.jpg">
 
 
 
@@ -120,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/14/Homebrew注意事项和使用技巧/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/16/Git命令大全/">
 
 
 
@@ -130,7 +129,7 @@
   };
 </script>
 
-  <title>Homebrew注意事项和使用技巧 | ClwsBlogs</title>
+  <title>Git命令大全 | ClwsBlogs</title>
   
 
 
@@ -309,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/14/Homebrew注意事项和使用技巧/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/16/Git命令大全/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maydayclw">
@@ -326,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Homebrew注意事项和使用技巧
+          <h1 class="post-title" itemprop="name headline">Git命令大全
 
               
             
@@ -352,7 +351,7 @@
                 
               
 
-              <time title="创建时间：2019-07-14 22:31:00 / 修改时间：22:37:07" itemprop="dateCreated datePublished" datetime="2019-07-14T22:31:00+08:00">2019-07-14</time>
+              <time title="创建时间：2019-07-16 14:01:46 / 修改时间：14:17:38" itemprop="dateCreated datePublished" datetime="2019-07-16T14:01:46+08:00">2019-07-16</time>
             </span>
           
 
@@ -394,12 +393,7 @@
       
 
       
-        <p><strong>该文章记录Homebrew的一些使用注意事项和使用技巧</strong></p>
-<a id="more"></a>
-<h1 id="Homebrew-镜像使用帮助"><a href="#Homebrew-镜像使用帮助" class="headerlink" title="Homebrew 镜像使用帮助"></a>Homebrew 镜像使用帮助</h1><h2 id="替换现有上游"><a href="#替换现有上游" class="headerlink" title="替换现有上游"></a>替换现有上游</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span><br><span class="line"></span><br><span class="line">git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
-
-<h2 id="复原"><a href="#复原" class="headerlink" title="复原"></a>复原</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git</span><br><span class="line"></span><br><span class="line">git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
-
+        <p><img src="http://ww4.sinaimg.cn/large/006tNc79ly1g51nipvwfvj316h0u0b2a.jpg" alt="git命令大全"></p>
 
       
     </div>
@@ -459,9 +453,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Homebrew/" rel="tag"># Homebrew</a>
-          
-            <a href="/tags/Mac/" rel="tag"># Mac</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -474,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/14/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/14/Homebrew注意事项和使用技巧/" rel="next" title="Homebrew注意事项和使用技巧">
+                <i class="fa fa-chevron-left"></i> Homebrew注意事项和使用技巧
               </a>
             
           </div>
@@ -483,10 +475,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/16/Git命令大全/" rel="prev" title="Git命令大全">
-                Git命令大全 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -530,17 +518,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -635,23 +614,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Homebrew-镜像使用帮助"><span class="nav-number">1.</span> <span class="nav-text">Homebrew 镜像使用帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#替换现有上游"><span class="nav-number">1.1.</span> <span class="nav-text">替换现有上游</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复原"><span class="nav-number">1.2.</span> <span class="nav-text">复原</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       

@@ -101,18 +101,13 @@
 
 
 
-  <meta name="description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
-<meta name="keywords" content="Homebrew,Mac">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Homebrew注意事项和使用技巧">
-<meta property="og:url" content="http://yoursite.com/2019/07/14/Homebrew注意事项和使用技巧/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="ClwsBlogs">
+<meta property="og:url" content="http://yoursite.com/tags/Git/index.html">
 <meta property="og:site_name" content="ClwsBlogs">
-<meta property="og:description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-14T14:37:07.691Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Homebrew注意事项和使用技巧">
-<meta name="twitter:description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
+<meta name="twitter:title" content="ClwsBlogs">
 
 
 
@@ -120,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/14/Homebrew注意事项和使用技巧/">
+  <link rel="canonical" href="http://yoursite.com/tags/Git/">
 
 
 
@@ -130,7 +125,7 @@
   };
 </script>
 
-  <title>Homebrew注意事项和使用技巧 | ClwsBlogs</title>
+  <title>标签: Git | ClwsBlogs</title>
   
 
 
@@ -178,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -232,7 +227,7 @@
         
         
           
-          <li class="menu-item menu-item-tags">
+          <li class="menu-item menu-item-tags menu-item-active">
 
     
     
@@ -289,228 +284,77 @@
           
             
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
           
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>Git<small>标签</small>
+        </h1>
+      </div>
 
-  
-  
-  
-
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/14/Homebrew注意事项和使用技巧/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maydayclw">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/D5.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClwsBlogs">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+          <a class="post-title-link" href="/2019/07/16/Git命令大全/" itemprop="url">
+            
+              <span itemprop="name">Git命令大全</span>
+            
+          </a>
         
-          <h1 class="post-title" itemprop="name headline">Homebrew注意事项和使用技巧
+      </h2>
 
-              
-            
-          </h1>
-        
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-07-16T14:01:46+08:00" content="2019-07-16">
+          07-16
+        </time>
+      </div>
 
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-14 22:31:00 / 修改时间：22:37:07" itemprop="dateCreated datePublished" datetime="2019-07-14T22:31:00+08:00">2019-07-14</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p><strong>该文章记录Homebrew的一些使用注意事项和使用技巧</strong></p>
-<a id="more"></a>
-<h1 id="Homebrew-镜像使用帮助"><a href="#Homebrew-镜像使用帮助" class="headerlink" title="Homebrew 镜像使用帮助"></a>Homebrew 镜像使用帮助</h1><h2 id="替换现有上游"><a href="#替换现有上游" class="headerlink" title="替换现有上游"></a>替换现有上游</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span><br><span class="line"></span><br><span class="line">git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
-
-<h2 id="复原"><a href="#复原" class="headerlink" title="复原"></a>复原</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git</span><br><span class="line"></span><br><span class="line">git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
+    </header>
+  </article>
 
 
       
     </div>
 
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-      <div>
-        <div id="reward-container">
-  <div></div>
-  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/WechatPay.jpeg" alt="maydayclw 微信支付">
-        <p>微信支付</p>
-      </div>
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/AliPay.jpeg" alt="maydayclw 支付宝">
-        <p>支付宝</p>
-      </div>
-    
-
-  </div>
-</div>
-
-      </div>
-    
-
-    
-
-    <footer class="post-footer">
-      
-        
-          
-        
-        <div class="post-tags">
-          
-            <a href="/tags/Homebrew/" rel="tag"># Homebrew</a>
-          
-            <a href="/tags/Mac/" rel="tag"># Mac</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/07/14/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/16/Git命令大全/" rel="prev" title="Git命令大全">
-                Git命令大全 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
 
   
 
 
+
+          </div>
+          
 
         </div>
         
@@ -530,17 +374,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -635,23 +470,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Homebrew-镜像使用帮助"><span class="nav-number">1.</span> <span class="nav-text">Homebrew 镜像使用帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#替换现有上游"><span class="nav-number">1.1.</span> <span class="nav-text">替换现有上游</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复原"><span class="nav-number">1.2.</span> <span class="nav-text">复原</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
@@ -776,10 +594,6 @@
 
 
   
-  <script src="/js/scrollspy.js?v=7.2.0"></script>
-<script src="/js/post-details.js?v=7.2.0"></script>
-
-
 
   
 
@@ -795,8 +609,6 @@
 
   
 
-
-  
 
 
   
