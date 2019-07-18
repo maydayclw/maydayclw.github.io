@@ -101,18 +101,18 @@
 
 
 
-  <meta name="description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
+  <meta name="description" content="Homebrew 镜像使用帮助替换现有上游12345git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.gitgit -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mi">
 <meta name="keywords" content="Homebrew,Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Homebrew注意事项和使用技巧">
 <meta property="og:url" content="http://yoursite.com/2019/07/14/Homebrew注意事项和使用技巧/index.html">
 <meta property="og:site_name" content="ClwsBlogs">
-<meta property="og:description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
+<meta property="og:description" content="Homebrew 镜像使用帮助替换现有上游12345git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.gitgit -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mi">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-14T14:37:07.691Z">
+<meta property="og:updated_time" content="2019-07-18T12:20:04.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Homebrew注意事项和使用技巧">
-<meta name="twitter:description" content="该文章记录Homebrew的一些使用注意事项和使用技巧">
+<meta name="twitter:description" content="Homebrew 镜像使用帮助替换现有上游12345git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.gitgit -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mi">
 
 
 
@@ -352,13 +352,23 @@
                 
               
 
-              <time title="创建时间：2019-07-14 22:31:00 / 修改时间：22:37:07" itemprop="dateCreated datePublished" datetime="2019-07-14T22:31:00+08:00">2019-07-14</time>
+              <time title="创建时间：2019-07-14 22:31:00" itemprop="dateCreated datePublished" datetime="2019-07-14T22:31:00+08:00">2019-07-14</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-18 20:20:04" itemprop="dateModified" datetime="2019-07-18T20:20:04+08:00">2019-07-18</time>
+              </span>
             
           
 
@@ -394,9 +404,7 @@
       
 
       
-        <p><strong>该文章记录Homebrew的一些使用注意事项和使用技巧</strong></p>
-<a id="more"></a>
-<h1 id="Homebrew-镜像使用帮助"><a href="#Homebrew-镜像使用帮助" class="headerlink" title="Homebrew 镜像使用帮助"></a>Homebrew 镜像使用帮助</h1><h2 id="替换现有上游"><a href="#替换现有上游" class="headerlink" title="替换现有上游"></a>替换现有上游</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span><br><span class="line"></span><br><span class="line">git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
+        <h1 id="Homebrew-镜像使用帮助"><a href="#Homebrew-镜像使用帮助" class="headerlink" title="Homebrew 镜像使用帮助"></a>Homebrew 镜像使用帮助</h1><h2 id="替换现有上游"><a href="#替换现有上游" class="headerlink" title="替换现有上游"></a>替换现有上游</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span><br><span class="line"></span><br><span class="line">git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
 
 <h2 id="复原"><a href="#复原" class="headerlink" title="复原"></a>复原</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git</span><br><span class="line"></span><br><span class="line">git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
 
@@ -473,10 +481,6 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/07/14/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
             
           </div>
 
@@ -582,7 +586,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

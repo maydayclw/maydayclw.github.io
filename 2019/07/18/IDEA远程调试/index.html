@@ -101,13 +101,23 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ClwsBlogs">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="你是否遇到过测试环境中根据日志追踪问题半天查不到原因的情况，这很大部分原因是对由于你对异常的处理不够好，日志没有记录导致的；通过远程调试能快速的帮助你找到测试环境产生的问题。  这种方式是个捷径，但我们不能过度的依赖它；而是应该处理好异常，异常日志不要漏打。">
+<meta name="keywords" content="IDEA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IDEA远程调试">
+<meta property="og:url" content="http://yoursite.com/2019/07/18/IDEA远程调试/index.html">
 <meta property="og:site_name" content="ClwsBlogs">
+<meta property="og:description" content="你是否遇到过测试环境中根据日志追踪问题半天查不到原因的情况，这很大部分原因是对由于你对异常的处理不够好，日志没有记录导致的；通过远程调试能快速的帮助你找到测试环境产生的问题。  这种方式是个捷径，但我们不能过度的依赖它；而是应该处理好异常，异常日志不要漏打。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79ly1g5491exmluj317u0u0dmt.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79ly1g5493k7ippj317u0u0q6u.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79ly1g5495o0sfoj30c401sq2u.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79ly1g5498m45xfj30ne0agjry.jpg">
+<meta property="og:updated_time" content="2019-07-18T12:18:19.506Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ClwsBlogs">
+<meta name="twitter:title" content="IDEA远程调试">
+<meta name="twitter:description" content="你是否遇到过测试环境中根据日志追踪问题半天查不到原因的情况，这很大部分原因是对由于你对异常的处理不够好，日志没有记录导致的；通过远程调试能快速的帮助你找到测试环境产生的问题。  这种方式是个捷径，但我们不能过度的依赖它；而是应该处理好异常，异常日志不要漏打。">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006tNc79ly1g5491exmluj317u0u0dmt.jpg">
 
 
 
@@ -115,7 +125,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/18/IDEA远程调试/">
 
 
 
@@ -125,7 +135,7 @@
   };
 </script>
 
-  <title>ClwsBlogs</title>
+  <title>IDEA远程调试 | ClwsBlogs</title>
   
 
 
@@ -173,8 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,7 +221,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -288,9 +297,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -322,10 +331,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/18/IDEA远程调试/" class="post-title-link" itemprop="url">IDEA远程调试</a>
+          <h1 class="post-title" itemprop="name headline">IDEA远程调试
+
               
             
           </h1>
@@ -392,21 +399,35 @@
       
 
       
-        
-          <p>你是否遇到过测试环境中根据日志追踪问题半天查不到原因的情况，这很大部分原因是对由于你对异常的处理不够好，日志没有记录导致的；通过远程调试能快速的帮助你找到测试环境产生的问题。</p>
+        <p>你是否遇到过测试环境中根据日志追踪问题半天查不到原因的情况，这很大部分原因是对由于你对异常的处理不够好，日志没有记录导致的；通过远程调试能快速的帮助你找到测试环境产生的问题。</p>
 <blockquote>
 <p>这种方式是个捷径，但我们不能过度的依赖它；而是应该处理好异常，异常日志不要漏打。</p>
 </blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/18/IDEA远程调试/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+<a id="more"></a>
+
+<h2 id="服务端开启调试模式"><a href="#服务端开启调试模式" class="headerlink" title="服务端开启调试模式"></a>服务端开启调试模式</h2><p>在服务端tomcat的catalina.sh文件中添JVM参数</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=xxxx</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数解释"><a href="#参数解释" class="headerlink" title="参数解释"></a>参数解释</h3><ol>
+<li>-Xdebug：通知JVM工作在调试模式下</li>
+<li>-Xrunjdwp：通知JVM使用（java debug wire protocol）来运行调试环境。参数同时有一系列的调试选项:<ol>
+<li><code>session</code>:指定了调试数据的传送方式，dt_socket是指用SOCKET模式，另外dt_shmem指用共享内存方式，其中dt_shmem只适用于窗口平台.server  参数是指是否支持在服务器模式的虚拟机中</li>
+</ol>
+</li>
+<li>onthrow：指明当产生该类型的异常时，JVM就会中断下来，进行调式该参数任选:<ol>
+<li><code>release</code>:指明当JVM被中断下来时，执行的可执行程序该参数可选</li>
+<li><code>suspend</code>:指明：是否在调试客户端建立起来后，再执行 JVM</li>
+</ol>
+</li>
+<li>onuncaught（= y或n）指明出现未捕获的异常后，是否中断JVM的执行</li>
+</ol>
+<h2 id="IDEA远程调试配置"><a href="#IDEA远程调试配置" class="headerlink" title="IDEA远程调试配置"></a>IDEA远程调试配置</h2><p><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g5491exmluj317u0u0dmt.jpg" alt></p>
+<ol>
+<li>打开Inteliij IDEA，顶部菜单栏选择Run-&gt; Edit Configurations，进入下图的运行/调试配置界面;点击左上角’+’号，选择Remote。<br><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g5493k7ippj317u0u0q6u.jpg" alt></li>
+<li>分别填写参数：Name，Host，Port；选择需要运行的模块。<br><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g5495o0sfoj30c401sq2u.jpg" alt></li>
+<li>选择配置的运行方式，点击Debug方式运行。<h2 id="断点注意事项"><a href="#断点注意事项" class="headerlink" title="断点注意事项"></a>断点注意事项</h2>由于测试环境可能是多个人在跑，为了尽可能少的影响别人，可以将断点的模式改为Thread，这样就不会阻断其它线程的运行。<br><img src="http://ww4.sinaimg.cn/large/006tNc79ly1g5498m45xfj30ne0agjry.jpg" alt></li>
+</ol>
+
       
     </div>
 
@@ -422,342 +443,77 @@
       
     
     
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/WechatPay.jpeg" alt="maydayclw 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/AliPay.jpeg" alt="maydayclw 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/16/Git命令大全/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maydayclw">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/D5.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClwsBlogs">
-    </span>
-
-    
-      <header class="post-header">
-
         
+          
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/16/Git命令大全/" class="post-title-link" itemprop="url">Git命令大全</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
+        <div class="post-tags">
           
+            <a href="/tags/IDEA/" rel="tag"># IDEA</a>
           
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-16 14:01:46 / 修改时间：14:17:38" itemprop="dateCreated datePublished" datetime="2019-07-16T14:01:46+08:00">2019-07-16</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-            <p>
-              
-
-              
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/16/Git命令大全/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/16/Git命令大全/" rel="next" title="Git命令大全">
+                <i class="fa fa-chevron-left"></i> Git命令大全
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/14/Homebrew注意事项和使用技巧/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maydayclw">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/D5.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClwsBlogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/14/Homebrew注意事项和使用技巧/" class="post-title-link" itemprop="url">Homebrew注意事项和使用技巧</a>
-              
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
+          <span class="post-nav-divider"></span>
 
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-14 22:31:00" itemprop="dateCreated datePublished" datetime="2019-07-14T22:31:00+08:00">2019-07-14</time>
-            </span>
-          
-
-          
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-18 20:20:04" itemprop="dateModified" datetime="2019-07-18T20:20:04+08:00">2019-07-18</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>
-              Homebrew 镜像使用帮助替换现有上游git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.gitgit -C "$(brew --repo hom
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/14/Homebrew注意事项和使用技巧/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -767,14 +523,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -794,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -892,6 +658,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#服务端开启调试模式"><span class="nav-number">1.</span> <span class="nav-text">服务端开启调试模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数解释"><span class="nav-number">1.1.</span> <span class="nav-text">参数解释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA远程调试配置"><span class="nav-number">2.</span> <span class="nav-text">IDEA远程调试配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#断点注意事项"><span class="nav-number">3.</span> <span class="nav-text">断点注意事项</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1016,6 +799,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   
 
@@ -1031,6 +818,8 @@
 
   
 
+
+  
 
 
   
